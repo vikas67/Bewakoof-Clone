@@ -1,0 +1,9 @@
+export 'home.screen.dart';
+export 'splash.screen.dart';
+export 'men.screen.dart';
+export 'women.screen.dart';
+export 'accessories.screen.dart';
+export 'dashboard.screen.dart';
+export 'categories.screen.dart';
+export 'wishlist.screen.dart';
+export 'account.screen.dart';
