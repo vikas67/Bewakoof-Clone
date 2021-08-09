@@ -11,8 +11,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Bewakoop clone',
-      debugShowCheckedModeBanner: true,
-      theme: ThemeData(),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(fontFamily: 'Lato'),
       home: DashboardScreen(),
     );
   }

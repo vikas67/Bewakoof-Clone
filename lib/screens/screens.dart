@@ -7,3 +7,4 @@ export 'dashboard.screen.dart';
 export 'categories.screen.dart';
 export 'wishlist.screen.dart';
 export 'account.screen.dart';
+export 'login.screen.dart';

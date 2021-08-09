@@ -17,7 +17,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
       child: MyHomePage(),
     ),
     Container(
-      child: CategoriesScreen(),
+      child: LoginScreem(),
     ),
     Container(
       child: WishlistScreen(),

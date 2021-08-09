@@ -1,3 +1,5 @@
+import 'package:bewakoop_clone/Widgets/home_categoryOffer.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import '../Widgets/widget.dart';
@@ -144,12 +146,17 @@ class _MenScreenState extends State<MenScreen> {
             height: 20.0,
             color: Colors.transparent,
           ),
+          HomeCategoryOffer(),
+          Divider(
+            height: 20.0,
+            color: Colors.transparent,
+          ),
           Container(
               alignment: Alignment.center,
               child: Column(
                 children: [
                   Text(
-                    "Category Deals",
+                    "Lightning Deal (6PM-12Am)",
                     style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.w700,
@@ -158,10 +165,136 @@ class _MenScreenState extends State<MenScreen> {
                   ),
                   Container(
                     margin: EdgeInsets.only(top: 10.0),
-                    decoration: BoxDecoration(border: Border()),
+                    width: MediaQuery.of(context).size.width,
+                    child: AspectRatio(
+                        aspectRatio: 4 / 2,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(1.0),
+                          child: Image.network(
+                            'https://image.shutterstock.com/image-photo/3d-wallpaper-seven-horses-running-260nw-1429981745.jpg',
+                            fit: BoxFit.cover,
+                          ),
+                        )),
                   )
                 ],
               )),
+          Divider(
+            height: 24.0,
+            color: Colors.transparent,
+          ),
+          Container(
+              alignment: Alignment.center,
+              child: Column(
+                children: [
+                  Text(
+                    "Lightning Deal (6PM-12Am)",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w700,
+                        fontSize: 16.0,
+                        letterSpacing: 3.0),
+                  ),
+                  AspectRatio(
+                    aspectRatio: 4 / 2,
+                    child: Container(
+                      margin: EdgeInsets.only(top: 20.0),
+                      child: CarouselSlider(
+                        options: CarouselOptions(
+                            autoPlay: true,
+                            viewportFraction: 90,
+                            pauseAutoPlayOnTouch: true),
+                        items: [1, 2, 3, 4, 5].map((i) {
+                          return Builder(
+                            builder: (BuildContext context) {
+                              return Container(
+                                  width: MediaQuery.of(context).size.width,
+                                  decoration:
+                                      BoxDecoration(color: Colors.amber),
+                                  child: Text(
+                                    'text $i',
+                                    style: TextStyle(fontSize: 16.0),
+                                  ));
+                            },
+                          );
+                        }).toList(),
+                      ),
+                    ),
+                  )
+                ],
+              )),
+          AspectRatio(
+            aspectRatio: 4 / 1.5,
+            child: Container(
+              margin: EdgeInsets.only(top: 10.0),
+              child: CarouselSlider(
+                options: CarouselOptions(
+                    autoPlay: false,
+                    viewportFraction: 90,
+                    pauseAutoPlayOnTouch: true),
+                items: [1, 2, 3, 4, 5].map((i) {
+                  return Builder(
+                    builder: (BuildContext context) {
+                      return Container(
+                          width: MediaQuery.of(context).size.width,
+                          decoration: BoxDecoration(color: Colors.blue[400]),
+                          child: Text(
+                            'text $i',
+                            style: TextStyle(fontSize: 16.0),
+                          ));
+                    },
+                  );
+                }).toList(),
+              ),
+            ),
+          ),
+          Divider(
+            height: 24.0,
+            color: Colors.transparent,
+          ),
+          Container(
+              alignment: Alignment.center,
+              child: Column(children: [
+                Text(
+                  "Top Wear",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w700,
+                      fontSize: 16.0,
+                      letterSpacing: 3.0),
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 10.0),
+                  child: GridView.count(
+                    crossAxisCount: 3,
+                    childAspectRatio: 2 / 3,
+                    shrinkWrap: true,
+                    crossAxisSpacing: 20.0,
+                    children: [
+                      Column(
+                        children: [
+                          AspectRatio(
+                            aspectRatio: 2 / 2,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(10.0),
+                              child: Container(
+                                child: Image.network(
+                                  'https://image.shutterstock.com/image-photo/3d-wallpaper-seven-horses-running-260nw-1429981745.jpg',
+                                  fit: BoxFit.cover,
+                                  color: Colors.grey.shade700,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Text(
+                            "men csacsdcsdc",
+                            textAlign: TextAlign.center,
+                          )
+                        ],
+                      ),
+                    ],
+                  ),
+                )
+              ]))
         ],
       ),
     );
