@@ -1,14 +1,13 @@
-import 'package:bewakoop_clone/Widgets/home_categoryOffer.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import '../Widgets/widget.dart';
 
 class MenScreen extends StatefulWidget {
-  const MenScreen({Key? key}) : super(key: key);
-
   @override
   _MenScreenState createState() => _MenScreenState();
+
+
 }
 
 class _MenScreenState extends State<MenScreen> {
@@ -87,9 +86,10 @@ class _MenScreenState extends State<MenScreen> {
                     "Lightning Deal (6PM-12Am)",
                     style: TextStyle(
                         color: Colors.black,
-                        fontWeight: FontWeight.w700,
-                        fontSize: 16.0,
-                        letterSpacing: 3.0),
+                        fontWeight: FontWeight.w600,
+                        fontSize: 14.0,
+                        fontFamily: 'Lato',
+                        letterSpacing: 2.5),
                   ),
                   Container(
                     margin: EdgeInsets.only(top: 10.0),

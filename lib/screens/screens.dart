@@ -8,3 +8,6 @@ export 'categories.screen.dart';
 export 'wishlist.screen.dart';
 export 'account.screen.dart';
 export 'login.screen.dart';
+export 'product.screen.dart';
+export 'product_details.screen.dart';
+export 'cart.screen.dart';
